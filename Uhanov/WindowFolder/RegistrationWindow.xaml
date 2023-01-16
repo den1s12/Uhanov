@@ -51,9 +51,11 @@
         <PasswordBox x:Name="RepeatPasswordPsb" Grid.Row="7" Grid.Column="2"/>
 
         <Button Content="Зарегистрироваться" Grid.Row="9" Grid.Column="2"
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                x:Name="RegBtn" Click="RegBtn_Click"/>
         <Button Content="Выйти" Grid.Row="9" Grid.Column="1"
-                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                x:Name="ExitBtn" Click="ExitBtn_Click"/>
         
         </Grid>
 </Window>

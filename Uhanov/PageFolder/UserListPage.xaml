@@ -1,0 +1,58 @@
+﻿<Page x:Class="Uhanov.PageFolder.UserListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Uhanov.PageFolder"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserListPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <TextBox x:Name="SearchTb"
+                 Text="Поиск"
+                 TextChanged="SearchTb_TextChanged"/>
+
+        <DataGrid x:Name="ListUserDG"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  ScrollViewer.CanContentScroll="True"
+                  Grid.Row="1"
+                  MouseDoubleClick="ListUserDG_MouseDoubleClick">
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="BookCM">
+                    <MenuItem Header="Редактирование" x:Name="EditM" Click="EditM_Click"/>
+                    <Separator/>
+                    <MenuItem Header="Удалить" x:Name="DeleteM" Click="DeleteM_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="dgTcIdUser"
+                                    Header="№ п/п"
+                                    Width="150"
+                                    Binding="{Binding IdUser}"/>
+
+                <DataGridTextColumn x:Name="dgTcLoginUser"
+                                    Header="Логин"
+                                    Width="200"
+                                    Binding="{Binding LoginUser}"/>
+                <DataGridTextColumn x:Name="dgTcPassword"
+                                    Header="Пароль"
+                                    Width="200"
+                                    Binding="{Binding PasswordUser}"/>
+                <DataGridTextColumn x:Name="dgTcNameRoler"
+                                    Header="Роль"
+                                    Width="200"
+                                    Binding="{Binding Role.NameRole}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+    </Grid>
+</Page>

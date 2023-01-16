@@ -5,7 +5,7 @@
     <SolidColorBrush x:Key="MainAccentuation" Color="#3b738f"/>
     <SolidColorBrush x:Key="MainAdditionalBackground" Color="#4f90a6"/>
 
-    <!--<Style x:Key="TopBorder" TargetType="Border">
+    <Style x:Key="TopBorder" TargetType="Border">
         <Setter Property="Background"
                 Value="{StaticResource MainBackground}"/>
         <Setter Property="CornerRadius" Value="17, 17, 0, 0"/>
@@ -16,7 +16,7 @@
         <Setter Property="CornerRadius" Value="17"/>
         <Setter Property="BorderBrush"
                 Value="{StaticResource MainBackground}"/>
-    </Style>-->
+    </Style>
 
     <Style x:Key="HeadingLabel" TargetType="Label">
         <Setter Property="FontFamily" Value="Century"/>
@@ -67,13 +67,13 @@
         <Setter Property="Width" Value="300"/>
     </Style>
 
-    <!--<Style x:Key="ButtonTextBlock" TargetType="TextBlock">
+    <Style x:Key="ButtonTextBlock" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="Century"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Margin" Value="5,0,0,0"/>
-    </Style>-->
+    </Style>
 
     <Style x:Key="ComboBox" TargetType="{x:Type ComboBox}">
         <Setter Property="FontFamily" Value="Century"/>
@@ -87,6 +87,14 @@
         <Setter Property="Source" Value="C:\Users\Уханов\source\repos\Uhanov\Uhanov\ResourceFolder\Logo.png"/>
         <Setter Property="Margin" Value="10"/>
         <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
+    
+    <Style TargetType="DataGrid">
+        <Setter Property="FontFamily" Value="Century"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
     </Style>
 
 </ResourceDictionary>

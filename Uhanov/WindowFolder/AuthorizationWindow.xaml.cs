@@ -64,7 +64,7 @@ namespace Uhanov.WindowFolder
                         switch (user.IdRole)
                         {
                             case 1:
-                                MBClass.InfoMB("Администратор системы");
+                                new AdminWindow().ShowDialog();
                                 break;
 
                             case 2:

@@ -11,7 +11,8 @@
         MaxHeight="470" MaxWidth="400"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid.ColumnDefinitions>
+        
+            <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="170"/>
             <ColumnDefinition/>

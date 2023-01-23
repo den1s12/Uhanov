@@ -12,25 +12,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Uhanov.DataFolder;
 
-namespace Uhanov.PageFolder
+namespace Uhanov.PageFolder.AdminPageFolder
 {
     /// <summary>
-    /// Логика взаимодействия для EditUserPage.xaml
+    /// Логика взаимодействия для AddUserPage.xaml
     /// </summary>
-    public partial class EditUserPage : Page
+    public partial class AddUserPage : Page
     {
-        public EditUserPage()
+        public AddUserPage()
         {
             InitializeComponent();
-        }
-
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
-        {
-
+            RoleCB.ItemsSource = DBEntities.GetContext()
+               .Role.ToList();
         }
 
         private void AddUserBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Uhanov.ClassFolder;
 
-namespace Uhanov.WindowFolder
+namespace Uhanov.WindowFolder.AdminFolder
 {
     /// <summary>
     /// Логика взаимодействия для AdminWindow.xaml
@@ -23,17 +23,17 @@ namespace Uhanov.WindowFolder
         public AdminWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new PageFolder.UserListPage());
+            MainFrame.Navigate(new PageFolder.AdminPageFolder.UserListPage());
         }
 
         private void ListUser_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new PageFolder.UserListPage());
+            MainFrame.Navigate(new PageFolder.AdminPageFolder.UserListPage());
         }
 
         private void AddUser_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new PageFolder.AddUserPage());
+            MainFrame.Navigate(new PageFolder.AdminPageFolder.AddUserPage());
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)

@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using Uhanov.ClassFolder;
 using Uhanov.DataFolder;
 
-namespace Uhanov.PageFolder
+namespace Uhanov.PageFolder.AdminPageFolder
 {
     /// <summary>
     /// Логика взаимодействия для UserListPage.xaml
@@ -26,22 +26,20 @@ namespace Uhanov.PageFolder
         {
             InitializeComponent();
             ListUserDG.ItemsSource = DBEntities.GetContext().User.ToList()
-            .OrderBy(c => c.IdUser);
+           .OrderBy(u => u.IdUser);
         }
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
-        }
-
-        private void EditM_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DeleteM_Click(object sender, RoutedEventArgs e)
-        {
-
+            //try
+            //{
+            //    ListUserDG.ItemsSource = DBEntities.GetContext().User.Where
+            //    (u => u.LoginUser.StartsWith(SearchTb.Text)).ToList();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MBClass.ErrorMB(ex);
+            //}
         }
 
         private void ListUserDG_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -63,6 +61,23 @@ namespace Uhanov.PageFolder
                     MBClass.ErrorMB(ex);
                 }
             }
+        }
+
+        private void EditM_Click(object sender, RoutedEventArgs e)
+        {
+            User user = ListUserDG.SelectedItem as User;
+            VariableClass.UserId = user.IdUser;
+            NavigationService.Navigate(new EditUserPage(user));
+        }
+
+        private void DeleteM_Click(object sender, RoutedEventArgs e)
+        {
+            User user = ListUserDG.SelectedItem as User;
+            DBEntities.GetContext().User.Remove(user);
+            DBEntities.GetContext().SaveChanges();
+            MessageBox.Show("Данные удалены");
+
+            ListUserDG.ItemsSource = DBEntities.GetContext().User.ToList();
         }
     }
 }

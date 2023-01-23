@@ -64,7 +64,7 @@ namespace Uhanov.WindowFolder
                         switch (user.IdRole)
                         {
                             case 1:
-                                new AdminWindow().ShowDialog();
+                                new AdminFolder.AdminWindow().ShowDialog();
                                 break;
 
                             case 2:

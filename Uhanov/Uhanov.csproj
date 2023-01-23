@@ -95,16 +95,16 @@
     <Compile Include="DataFolder\User.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="PageFolder\AddUserPage.xaml.cs">
+    <Compile Include="PageFolder\AdminPageFolder\AddUserPage.xaml.cs">
       <DependentUpon>AddUserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageFolder\EditUserPage.xaml.cs">
+    <Compile Include="PageFolder\AdminPageFolder\EditUserPage.xaml.cs">
       <DependentUpon>EditUserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PageFolder\UserListPage.xaml.cs">
+    <Compile Include="PageFolder\AdminPageFolder\UserListPage.xaml.cs">
       <DependentUpon>UserListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowFolder\AdminWindow.xaml.cs">
+    <Compile Include="WindowFolder\AdminFolder\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowFolder\AuthorizationWindow.xaml.cs">
@@ -113,15 +113,15 @@
     <Compile Include="WindowFolder\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="PageFolder\AddUserPage.xaml">
+    <Page Include="PageFolder\AdminPageFolder\AddUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageFolder\EditUserPage.xaml">
+    <Page Include="PageFolder\AdminPageFolder\EditUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageFolder\UserListPage.xaml">
+    <Page Include="PageFolder\AdminPageFolder\UserListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,7 +129,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowFolder\AdminWindow.xaml">
+    <Page Include="WindowFolder\AdminFolder\AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,7 +179,10 @@
   <ItemGroup>
     <Resource Include="ResourceFolder\Logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PageFolder\StaffPageFolder\" />
+    <Folder Include="WindowFolder\StaffFolder\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DataFolder\DBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

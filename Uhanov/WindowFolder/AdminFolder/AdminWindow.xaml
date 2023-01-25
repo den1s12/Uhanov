@@ -8,62 +8,61 @@
         Title="AdminWindow"
         Height="750" Width="1200"
         MaxHeight="750" MaxWidth="1200"
-        MinHeight="750" MinWidth="1200">
+        MinHeight="750" MinWidth="1200"
+        Background="#d1eeea">
     <Grid>
-        <Border Style="{DynamicResource MainBorder}">
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="280"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="150"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Image
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image
                         Source="/Uhanov;component/ResourceFolder/Logo.png"/>
-                    <StackPanel Grid.Row="1">
-                        <Button x:Name="ListUser" 
+                <StackPanel Grid.Row="1">
+                    <Button x:Name="ListUser" 
                                 HorizontalAlignment="Left"
                                 Click="ListUser_Click" Margin="10,10,0,10" Width="270">
-                            <StackPanel Orientation="Horizontal" Width="190">
-                                <TextBlock Text="Список пользователей" Style="{DynamicResource ButtonTextBlock}"/>
-                            </StackPanel>
-                        </Button>
+                        <StackPanel Orientation="Horizontal" Width="190">
+                            <TextBlock Text="Список пользователей" Style="{DynamicResource ButtonTextBlock}"/>
+                        </StackPanel>
+                    </Button>
 
-                        <Button x:Name="AddUser" 
+                    <Button x:Name="AddUser" 
                                 HorizontalAlignment="Left"
                                 Click="AddUser_Click" Margin="10,10,0,10" Width="270">
-                            <StackPanel Orientation="Horizontal" Width="190">
-                                <TextBlock Text="Добавить пользователя" Style="{DynamicResource ButtonTextBlock}"/>
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-                    <Button x:Name="ExitBtn" Width="260" 
+                        <StackPanel Orientation="Horizontal" Width="190">
+                            <TextBlock Text="Добавить пользователя" Style="{DynamicResource ButtonTextBlock}"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <Button x:Name="ExitBtn" Width="260" 
                         HorizontalAlignment="Left"
                         VerticalAlignment="Bottom" Grid.Row="1"
                         Click="ExitBtn_Click">
-                        <StackPanel Orientation="Horizontal" Width="70">
-                            <TextBlock Text="Выйти" Style="{DynamicResource ButtonTextBlock}"/>
-                        </StackPanel>
-                    </Button>
-                </Grid>
+                    <StackPanel Orientation="Horizontal" Width="70">
+                        <TextBlock Text="Выйти" Style="{DynamicResource ButtonTextBlock}"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
 
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="70"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Label Style="{DynamicResource HeadingLabel}"
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Style="{DynamicResource NormalLabel}"
                            Content="{Binding ElementName=MainFrame,
                         Path=Content.Title}"/>
-                    <Frame Grid.Row="1" Name="MainFrame" Margin="10"
+                <Frame Grid.Row="1" Name="MainFrame" Margin="10"
                            NavigationUIVisibility="Hidden"/>
 
-                </Grid>
             </Grid>
-        </Border>
+        </Grid>
     </Grid>
 </Window>

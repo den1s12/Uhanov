@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Uhanov.PageFolder.AdminPageFolder"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-       Title="Редактирование пользователя">
+       Title="Редактирование пользователя"
+      Background="#d1eeea">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -27,25 +28,24 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Content="Логин" Grid.Column="1"
-               Grid.Row="1" Style="{DynamicResource OrdinaryLabel}"/>
+               Grid.Row="1" Style="{DynamicResource NormalLabel}"/>
         <TextBox x:Name="LoginTB"
                  Grid.Row="1" Grid.Column="2"/>
 
         <Label Content="Пароль" Grid.Column="1"
-               Grid.Row="3" Style="{DynamicResource OrdinaryLabel}"/>
+               Grid.Row="3" Style="{DynamicResource NormalLabel}"/>
         <TextBox x:Name="PasswordTB"
                  Grid.Row="3" Grid.Column="2"/>
 
         <Label Content="Роль" Grid.Column="1"
-               Grid.Row="5" Style="{DynamicResource OrdinaryLabel}"/>
+               Grid.Row="5" Style="{DynamicResource NormalLabel}"/>
         <ComboBox x:Name="RoleCB"
                  Grid.Row="5" Grid.Column="2"
                      SelectedItem="{Binding Role}"
                           DisplayMemberPath="NameRole"
                           SelectedValuePath="IdRole"
                   HorizontalContentAlignment="Left"
-                  Width="280" Height="50"
-                  Style="{DynamicResource ComboBox}"/>
+                  Width="280" Height="50"/>
 
         <Button x:Name="AddUserBtn"
                 Click="AddUserBtn_Click"

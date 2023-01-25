@@ -1,57 +1,50 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <SolidColorBrush x:Key="MainBackground" Color="#2a5674"/>
-    <SolidColorBrush x:Key="MainAccentuation" Color="#3b738f"/>
-    <SolidColorBrush x:Key="MainAdditionalBackground" Color="#4f90a6"/>
+    <SolidColorBrush x:Key="FillFon" Color="#68abb8"/>
+    <SolidColorBrush x:Key="FillFont" Color="#2a5674"/>
+    <SolidColorBrush x:Key="FillBorder" Color="#d1eeea"/>
 
-    <Style x:Key="TopBorder" TargetType="Border">
-        <Setter Property="Background"
-                Value="{StaticResource MainBackground}"/>
-        <Setter Property="CornerRadius" Value="17, 17, 0, 0"/>
-    </Style>
-
-    <Style x:Key="MainBorder" TargetType="Border">
-        <Setter Property="Background" Value="#d1eeea"/>
-        <Setter Property="CornerRadius" Value="17"/>
-        <Setter Property="BorderBrush"
-                Value="{StaticResource MainBackground}"/>
-    </Style>
-
-    <Style x:Key="HeadingLabel" TargetType="Label">
+    <Style x:Key="LogoLabel" TargetType="Label">
         <Setter Property="FontFamily" Value="Century"/>
         <Setter Property="FontSize" Value="22"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Margin" Value="10"/>
-        <Setter Property="Foreground" Value="#2a5674"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
     </Style>
 
-    <Style x:Key="OrdinaryLabel" TargetType="Label"
-           BasedOn="{StaticResource HeadingLabel}">
+    <Style x:Key="NormalLabel" TargetType="Label">
+        <Setter Property="FontFamily" Value="Century"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="HorizontalContentAlignment" Value="Right"/>
-        <Setter Property="FontWeight" Value="Normal"/>
-        <Setter Property="FontFamily" Value="Century"/>
-        <Setter Property="Foreground" Value="#2a5674"/>
-    </Style>
-
-    <Style TargetType="{x:Type TextBox}">
-        <Setter Property="FontFamily" Value="Century"/>
-        <Setter Property="FontSize" Value="16"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="HorizontalContentAlignment" Value="Left"/>
-        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Margin" Value="10"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
     </Style>
 
-    <Style TargetType="{x:Type PasswordBox}">
+    <Style TargetType="TextBox">
         <Setter Property="FontFamily" Value="Century"/>
         <Setter Property="FontSize" Value="16"/>
-        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FillFont}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+
+    <Style TargetType="PasswordBox">
+        <Setter Property="FontFamily" Value="Century"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FillFont}"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Height" Value="50"/>
         <Setter Property="Margin" Value="10"/>
     </Style>
 
@@ -64,9 +57,9 @@
         <Setter Property="Margin" Value="10"/>
         <Setter Property="BorderBrush" Value="{x:Null}"/>
         <Setter Property="Background" Value="#3b738f"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{StaticResource FillBorder}"/>
         <Setter Property="Height" Value="60"/>
-        <Setter Property="Width" Value="300"/>
+        <Setter Property="Width" Value="180"/>
     </Style>
 
     <Style x:Key="ButtonTextBlock" TargetType="TextBlock">
@@ -77,26 +70,62 @@
         <Setter Property="Margin" Value="5,0,0,0"/>
     </Style>
 
-    <Style x:Key="ComboBox" TargetType="{x:Type ComboBox}">
+    <Style TargetType="ComboBox">
         <Setter Property="FontFamily" Value="Century"/>
-        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FillBorder}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="Margin" Value="10"/>
-        <Setter Property="BorderBrush" Value="White"/>
-        <Setter Property="Background" Value="#3b738f"/>
+        <Setter Property="Width" Value="340"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Height" Value="50"/>
     </Style>
 
     <Style TargetType="Image" x:Key="LogoImage">
-        <Setter Property="Source" Value="C:\Users\Уханов\source\repos\Uhanov\Uhanov\ResourceFolder\Logo.png"/>
+        <!--<Setter Property="Source" Value="C:\Users\Уханов\source\repos\Uhanov\Uhanov\ResourceFolder\Logo.png"/>-->
+        <Setter Property="Source" Value="C:\Users\PC\Source\Repos\Uhanov\Uhanov\ResourceFolder\Logo.png"/>
         <Setter Property="Margin" Value="10"/>
         <Setter Property="Stretch" Value="Uniform"/>
     </Style>
-    
-    <Style TargetType="DataGrid">
+
+    <Style TargetType="DataGridColumnHeader">
         <Setter Property="FontFamily" Value="Century"/>
-        <Setter Property="FontSize" Value="22"/>
-        <Setter Property="Margin" Value="10"/>
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
+        <Setter Property="BorderThickness" Value="0,0,1,0"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FillFont}"/>
     </Style>
 
+    <Style TargetType="DataGrid">
+        <Setter Property="FontFamily" Value="Century"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FillFont}"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="VerticalGridLinesBrush" Value="{StaticResource FillFont}"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="{StaticResource FillFont}"/>
+        <Setter Property="HeadersVisibility" Value="Column"/>
+    </Style>
+
+    <Style TargetType="DataGridRow">
+        <Setter Property="BorderBrush" Value="{StaticResource FillFont}"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+
+    <Style TargetType="MenuItem">
+        <Setter Property="FontFamily" Value="Century"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
+    </Style>
 </ResourceDictionary>

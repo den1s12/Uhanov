@@ -9,10 +9,11 @@
         Height="470" Width="400"
         MinHeight="470" MinWidth="400"
         MaxHeight="470" MaxWidth="400"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Background="#d1eeea">
     <Grid>
-        
-            <Grid.ColumnDefinitions>
+    
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="170"/>
             <ColumnDefinition/>
@@ -32,31 +33,33 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Image Style="{DynamicResource LogoImage}"
-               Grid.Column="1" Grid.Row="1"/>
-        
+               Grid.Column="1" Grid.Row="1" 
+               Width="170" Height="100" Margin="0"/>
+
         <Label Content="Авторизация" Grid.Row="1" Grid.Column="2"
-               Style="{DynamicResource HeadingLabel}"/>
+               Style="{DynamicResource LogoLabel}"/>
 
         <Label Content="Логин" Grid.Row="3" Grid.Column="1"
-               Style="{DynamicResource OrdinaryLabel}"
+               Style="{DynamicResource NormalLabel}"
                HorizontalAlignment="Center"/>
         <TextBox x:Name="LoginTb" Grid.Row="3" Grid.Column="2"/>
 
         <Label Content="Пароль" Grid.Row="5" Grid.Column="1"
-               Style="{DynamicResource OrdinaryLabel}"
+               Style="{DynamicResource NormalLabel}"
                HorizontalAlignment="Center"/>
         <PasswordBox x:Name="PasswordPsb" Grid.Row="5" Grid.Column="2"/>
 
         <Button Content="Войти" Grid.Row="7" Grid.Column="2"
                 HorizontalAlignment="Center" VerticalAlignment="Center"
                 x:Name="LoginBtn" Click="LoginBtn_Click"/>
-        
+
         <Button Content="Выйти" Grid.Row="7" Grid.Column="1"
                 HorizontalAlignment="Center" VerticalAlignment="Center"
                 x:Name="LogOutBtn" Click="LogOutBtn_Click"/>
-        
+
         <Button Content="Регистрация" Grid.Row="9" Grid.ColumnSpan="3"
                 HorizontalAlignment="Center" VerticalAlignment="Center"
-                x:Name="RegBtn" Click="RegBtn_Click"/>
+                x:Name="RegBtn" Click="RegBtn_Click"
+                Width="300"/>
     </Grid>
 </Window>

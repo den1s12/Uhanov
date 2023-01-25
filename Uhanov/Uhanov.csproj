@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PageFolder\StaffPageFolder\" />
+    <Folder Include="ResourceFolder\ImageFolder\" />
     <Folder Include="WindowFolder\StaffFolder\" />
   </ItemGroup>
   <ItemGroup>

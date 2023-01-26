@@ -69,7 +69,7 @@ namespace Uhanov.PageFolder.AdminPageFolder
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new UserListPage());
         }
     }
 }

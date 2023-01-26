@@ -30,12 +30,14 @@
         <Label Content="Логин" Grid.Column="1"
                Grid.Row="1" Style="{DynamicResource NormalLabel}"/>
         <TextBox x:Name="LoginTB"
-                 Grid.Row="1" Grid.Column="2"/>
+                 Grid.Row="1" Grid.Column="2"
+                 Text="{Binding LoginUser}"/>
 
         <Label Content="Пароль" Grid.Column="1"
                Grid.Row="3" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="PasswordTB"
-                 Grid.Row="3" Grid.Column="2"/>
+        <TextBox x:Name="PasswordPsb"
+                 Grid.Row="3" Grid.Column="2"
+                 Text="{Binding PasswordUser}"/>
 
         <Label Content="Роль" Grid.Column="1"
                Grid.Row="5" Style="{DynamicResource NormalLabel}"/>
@@ -47,8 +49,8 @@
                   HorizontalContentAlignment="Left"
                   Width="280" Height="50"/>
 
-        <Button x:Name="AddUserBtn"
-                Click="AddUserBtn_Click"
+        <Button x:Name="EditUserBtn"
+                Click="EditUserBtn_Click"
                 Width="270"
                 Grid.Column="2" Grid.Row="7">
             <StackPanel Orientation="Horizontal" Width="201" Height="37">

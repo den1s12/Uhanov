@@ -30,21 +30,21 @@ namespace Uhanov.PageFolder.AdminPageFolder
                 .Role.ToList();
         }
 
-        private void AddUserBtn_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new UserListPage());
+        }
+
+        private void EditUserBtn_Click(object sender, RoutedEventArgs e)
         {
             User user = DBEntities.GetContext().User.
-              FirstOrDefault(s => s.IdUser == VariableClass.UserId);
+             FirstOrDefault(s => s.IdUser == VariableClass.UserId);
             user.LoginUser = LoginTB.Text;
-            user.PasswordUser = PasswordTB.Text;
+            user.PasswordUser = PasswordPsb.Text;
             user.IdRole = Int32.Parse(RoleCB.SelectedValue.ToString());
             DBEntities.GetContext().SaveChanges();
             MBClass.InfoMB("Пользователь успешно отредактирован");
             NavigationService.Navigate(new UserListPage());
-        }
-
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

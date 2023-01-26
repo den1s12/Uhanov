@@ -65,6 +65,12 @@ namespace Uhanov.PageFolder.AdminPageFolder
 
         private void EditM_Click(object sender, RoutedEventArgs e)
         {
+            //if(ListUserDG.SelectedItem==null)
+            //{
+            //    MBClass.ErrorMB("Выберите " +
+            //        "пользователя для редактирования");
+            //}
+
             User user = ListUserDG.SelectedItem as User;
             VariableClass.UserId = user.IdUser;
             NavigationService.Navigate(new EditUserPage(user));

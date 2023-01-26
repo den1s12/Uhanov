@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Uhanov.ClassFolder;
 using Uhanov.DataFolder;
 
 namespace Uhanov.PageFolder.AdminPageFolder
@@ -30,6 +31,39 @@ namespace Uhanov.PageFolder.AdminPageFolder
 
         private void AddUserBtn_Click(object sender, RoutedEventArgs e)
         {
+            if(string.IsNullOrWhiteSpace(LoginTB.Text))
+            {
+                MBClass.ErrorMB("Введите логин");
+                LoginTB.Focus();
+            }
+            else if(string.IsNullOrWhiteSpace(PasswordPsb.Password))
+            {
+                MBClass.ErrorMB("Введите пароль");
+                PasswordPsb.Focus();
+            }
+            else if(RoleCB.SelectedIndex==-1)
+            {
+                MBClass.ErrorMB("Выберите роль для пользователя");
+                RoleCB.Focus();
+            }
+            else
+            {
+                try
+                {
+                    DBEntities.GetContext().User.Add(new User()
+                    {
+                        LoginUser=LoginTB.Text,
+                        PasswordUser=PasswordPsb.Password,
+                        IdRole=Int32.Parse(RoleCB.SelectedValue.ToString())
+                    });
+                    DBEntities.GetContext().SaveChanges();
+                    MBClass.InfoMB("Пользователь успешно добавлен");
+                }
+                catch (Exception ex)
+                {
+                    MBClass.ErrorMB(ex);
+                }
+            }
 
         }
 

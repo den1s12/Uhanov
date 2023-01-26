@@ -25,8 +25,8 @@ namespace Uhanov.PageFolder.AdminPageFolder
         public UserListPage()
         {
             InitializeComponent();
-            ListUserDG.ItemsSource = DBEntities.GetContext().User.ToList()
-           .OrderBy(u => u.IdUser);
+            ListUserDG.ItemsSource = DBEntities.GetContext().User
+                .ToList().OrderBy(u => u.IdUser);
         }
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)

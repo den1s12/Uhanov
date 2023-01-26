@@ -34,7 +34,7 @@
 
             <Label Content="Пароль" Grid.Column="1"
                Grid.Row="3" Style="{DynamicResource NormalLabel}"/>
-            <TextBox x:Name="PasswordTB"
+            <PasswordBox x:Name="PasswordPsb"
                  Grid.Row="3" Grid.Column="2"/>
 
             <Label Content="Роль" Grid.Column="1"

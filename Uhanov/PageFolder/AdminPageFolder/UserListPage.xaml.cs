@@ -31,15 +31,14 @@ namespace Uhanov.PageFolder.AdminPageFolder
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //try
-            //{
-            //    ListUserDG.ItemsSource = DBEntities.GetContext().User.Where
-            //    (u => u.LoginUser.StartsWith(SearchTb.Text)).ToList();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MBClass.ErrorMB(ex);
-            //}
+            ListUserDG.ItemsSource = DBEntities.GetContext()
+                 .User.Where(u => u.LoginUser
+                 .StartsWith(SearchTb.Text))
+                 .ToList().OrderBy(u => u.LoginUser);
+            if (ListUserDG.Items.Count <= 0)
+            {
+                MBClass.ErrorMB("Данные не найдены")
+            }
         }
 
         private void ListUserDG_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -65,11 +64,11 @@ namespace Uhanov.PageFolder.AdminPageFolder
 
         private void EditM_Click(object sender, RoutedEventArgs e)
         {
-            //if(ListUserDG.SelectedItem==null)
-            //{
-            //    MBClass.ErrorMB("Выберите " +
-            //        "пользователя для редактирования");
-            //}
+            if (ListUserDG.SelectedItem == null)
+            {
+                MBClass.ErrorMB("Выберите " +
+                    "пользователя для редактирования");
+            }
 
             User user = ListUserDG.SelectedItem as User;
             VariableClass.UserId = user.IdUser;
@@ -79,11 +78,26 @@ namespace Uhanov.PageFolder.AdminPageFolder
         private void DeleteM_Click(object sender, RoutedEventArgs e)
         {
             User user = ListUserDG.SelectedItem as User;
-            DBEntities.GetContext().User.Remove(user);
-            DBEntities.GetContext().SaveChanges();
-            MessageBox.Show("Данные удалены");
 
-            ListUserDG.ItemsSource = DBEntities.GetContext().User.ToList();
+            if(ListUserDG.SelectedItem==null)
+            {
+                MBClass.ErrorMB("Выберите пользователя" +
+                    "для удаления");
+            }
+            else
+            {
+                if(MBClass.QuestionMB("Удалить" +
+                    $"пользователя с логином" +
+                    $"{user.LoginUser}?"))
+                {
+                    DBEntities.GetContext().User.Remove(user);
+                    DBEntities.GetContext().SaveChanges();
+
+                    MessageBox.Show("Пользователь удален");
+                    ListUserDG.ItemsSource = DBEntities.GetContext()
+                        .User.ToList().OrderBy(u=>u.LoginUser);
+                }
+            }
         }
     }
 }

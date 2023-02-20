@@ -1,0 +1,69 @@
+﻿<Window x:Class="Uhanov.WindowFolder.StaffFolder.StaffWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uhanov.WindowFolder.StaffFolder"
+        mc:Ignorable="d"
+        Title="AdminWindow"
+        Height="750" Width="1200"
+        MaxHeight="750" MaxWidth="1200"
+        MinHeight="750" MinWidth="1200"
+        Background="#d1eeea">
+    <Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image
+                        Source="/Uhanov;component/ResourceFolder/Logo.png"/>
+                <StackPanel Grid.Row="1">
+                    <Button x:Name="ListUser" 
+                                HorizontalAlignment="Left"
+                                Click="ListUser_Click" Margin="10,10,0,10" Width="270">
+                        <StackPanel Orientation="Horizontal" Width="109">
+                            <TextBlock Text="Список книг" Style="{DynamicResource ButtonTextBlock}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="AddUser" 
+                                HorizontalAlignment="Left"
+                                Click="AddUser_Click" Margin="10,10,0,10" Width="270">
+                        <StackPanel Orientation="Horizontal" Width="148">
+                            <TextBlock Text="Добавить книгу" Style="{DynamicResource ButtonTextBlock}"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <Button x:Name="ExitBtn" Width="260" 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom" Grid.Row="1"
+                        Click="ExitBtn_Click">
+                    <StackPanel Orientation="Horizontal" Width="70">
+                        <TextBlock Text="Выйти" Style="{DynamicResource ButtonTextBlock}"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Style="{DynamicResource NormalLabel}"
+                           Content="{Binding ElementName=MainFrame,
+                        Path=Content.Title}"/>
+                <Frame Grid.Row="1" Name="MainFrame" Margin="10"
+                           NavigationUIVisibility="Hidden"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+

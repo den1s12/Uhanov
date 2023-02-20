@@ -37,7 +37,7 @@ namespace Uhanov.PageFolder.AdminPageFolder
                  .ToList().OrderBy(u => u.LoginUser);
             if (ListUserDG.Items.Count <= 0)
             {
-                MBClass.ErrorMB("Данные не найдены")
+                MBClass.ErrorMB("Данные не найдены");
             }
         }
 

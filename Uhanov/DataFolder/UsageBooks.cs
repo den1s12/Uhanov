@@ -12,13 +12,15 @@ namespace Uhanov.DataFolder
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class UsageBooks
     {
-        public int IdUser { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int IdRole { get; set; }
+        public int IdUsageBooksId { get; set; }
+        public int IdReader { get; set; }
+        public System.DateTime DateOfIssue { get; set; }
+        public System.DateTime DateOfDue { get; set; }
+        public int IdInstance { get; set; }
     
-        public virtual Role Role { get; set; }
+        public virtual Instance Instance { get; set; }
+        public virtual Reader Reader { get; set; }
     }
 }

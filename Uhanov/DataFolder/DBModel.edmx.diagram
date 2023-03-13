@@ -4,10 +4,37 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dd9436e6d3f34a1e86c983091ff22629" Name="Diagram1">
-        <EntityTypeShape EntityType="DBModel.Role" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModel.User" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+      <Diagram DiagramId="0029790a5e364ce589ab8dcd3352d6ed" Name="Diagram1">
+        <EntityTypeShape EntityType="DBModel.Adress" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.AreaOfKnowledge" Width="1.5" PointX="6" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Author" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Book" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.BookAreaOfKnowledge" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.BookAuthor" Width="1.5" PointX="8.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.City" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Instance" Width="1.5" PointX="10.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.PublishingHouse" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Reader" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Region" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Role" Width="1.5" PointX="9.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Street" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.UsageBooks" Width="1.5" PointX="7.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.User" Width="1.5" PointX="12" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.FK_Adress_City" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Adress_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Adress_Street" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Reader_Adress" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_BookAreaOfKnowledge_AreaOfKnowledge" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_BookAuthor_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Book_BookAuthor" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Book_City" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Book_PublishingHouse" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_BookAreaOfKnowledge_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_BookAuthor_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Instance_BookAuthor" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_UsageBooks_Instance" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_UsageBooks_Reader" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_User_Role" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

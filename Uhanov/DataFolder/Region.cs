@@ -12,13 +12,18 @@ namespace Uhanov.DataFolder
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Region
     {
-        public int IdUser { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int IdRole { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Region()
+        {
+            this.Adress = new HashSet<Adress>();
+        }
     
-        public virtual Role Role { get; set; }
+        public int IdRegion { get; set; }
+        public string NameRegion { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Adress> Adress { get; set; }
     }
 }

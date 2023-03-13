@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 
 namespace Uhanov.DataFolder
 {
-    public partial class DBEntities : DbContext
+    internal class ContexClass
     {
-        private static DBEntities context;
-
-        public static DBEntities GetContext()
+        public partial class DBEntities : DbContext
         {
-            if (context == null)
+            private static DBEntities context;
+
+            public static DBEntities GetContext()
             {
-                context = new DBEntities();
+                if (context == null)
+                {
+                    context = new DBEntities();
+                }
+                return context;
             }
-            return context;
         }
     }
 }

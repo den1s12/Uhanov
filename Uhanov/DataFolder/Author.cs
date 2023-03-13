@@ -12,13 +12,20 @@ namespace Uhanov.DataFolder
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Author
     {
-        public int IdUser { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int IdRole { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Author()
+        {
+            this.BookAuthor = new HashSet<BookAuthor>();
+        }
     
-        public virtual Role Role { get; set; }
+        public int IdAuthor { get; set; }
+        public string LastNameAuthor { get; set; }
+        public string FirstNameAuthor { get; set; }
+        public string Patronymic { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BookAuthor> BookAuthor { get; set; }
     }
 }

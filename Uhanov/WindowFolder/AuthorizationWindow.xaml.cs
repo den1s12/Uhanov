@@ -44,7 +44,7 @@ namespace Uhanov.WindowFolder
                 try
                 {
                     var user = DBEntities.GetContext()
-                        .User.FirstOrDefault(u=>u.LoginUser==LoginTb.Text);
+                        .User.FirstOrDefault(u=>u.Login==LoginTb.Text);
 
                     if(user == null)
                     {
@@ -53,7 +53,7 @@ namespace Uhanov.WindowFolder
                         return;
                     }
 
-                    if(user.PasswordUser != PasswordPsb.Password)
+                    if(user.Password != PasswordPsb.Password)
                     {
                         MBClass.ErrorMB("Введен не верный пароль");
                         PasswordPsb.Focus();

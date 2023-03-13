@@ -32,9 +32,9 @@ namespace Uhanov.PageFolder.AdminPageFolder
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
         {
             ListUserDG.ItemsSource = DBEntities.GetContext()
-                 .User.Where(u => u.LoginUser
+                 .User.Where(u => u.Login
                  .StartsWith(SearchTb.Text))
-                 .ToList().OrderBy(u => u.LoginUser);
+                 .ToList().OrderBy(u => u.Login);
             if (ListUserDG.Items.Count <= 0)
             {
                 MBClass.ErrorMB("Данные не найдены");
@@ -88,14 +88,14 @@ namespace Uhanov.PageFolder.AdminPageFolder
             {
                 if(MBClass.QuestionMB("Удалить" +
                     $"пользователя с логином" +
-                    $"{user.LoginUser}?"))
+                    $"{user.Login}?"))
                 {
                     DBEntities.GetContext().User.Remove(user);
                     DBEntities.GetContext().SaveChanges();
 
                     MessageBox.Show("Пользователь удален");
                     ListUserDG.ItemsSource = DBEntities.GetContext()
-                        .User.ToList().OrderBy(u=>u.LoginUser);
+                        .User.ToList().OrderBy(u=>u.Login);
                 }
             }
         }

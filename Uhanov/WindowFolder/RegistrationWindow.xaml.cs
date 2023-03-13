@@ -35,7 +35,7 @@ namespace Uhanov.WindowFolder
             }
             else if(DBEntities.GetContext()
                 .User.FirstOrDefault(u=>
-                u.LoginUser==LoginTb.Text) != null)
+                u.Login==LoginTb.Text) != null)
             {
                 MBClass.ErrorMB("Такой логин уже существует");
                 LoginTb.Focus();
@@ -56,8 +56,8 @@ namespace Uhanov.WindowFolder
                 {
                     DBEntities.GetContext().User.Add(new User()
                     {
-                        LoginUser = LoginTb.Text,
-                        PasswordUser = PasswordPsb.Password,
+                        Login = LoginTb.Text,
+                        Password = PasswordPsb.Password,
                         IdRole =2
                     });
                     DBEntities.GetContext().SaveChanges();

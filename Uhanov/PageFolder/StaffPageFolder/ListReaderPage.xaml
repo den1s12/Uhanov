@@ -6,74 +6,97 @@
       xmlns:local="clr-namespace:Uhanov.PageFolder.StaffPageFolder"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Список читателей"
-      Background="#d1eeea">
+      Title="Список читателей">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-
-        <TextBox x:Name="SearchTb"
-                 Text="Поиск"
+        <Label Content="Поиск"
+               Style="{DynamicResource NormalLabel}"/>
+        <TextBox x:Name="SearchTB"
+                 Grid.Column="1"
+                 Width="Auto"
                  TextChanged="SearchTb_TextChanged"/>
+        <ListBox Grid.Row="1"
+                 Grid.ColumnSpan="2"
+                 x:Name="ListReaderLB"
+                 SelectionMode="Multiple">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="4" Source="{Binding PhotoReader}"/>
+                        <TextBlock Grid.Column="1"
+                            Style="{DynamicResource ButtonTextBlock}">
+                            <Run Text="Фамилия" FontWeight="Bold"/>
+                            <Run Text="{Binding LastNameReader}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="1"
+                            Style="{DynamicResource ButtonTextBlock}">
+                            <Run Text="Имя" FontWeight="Bold"/>
+                            <Run Text="{Binding FirstNameReader}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="2" Grid.Column="1"
+                            Style="{DynamicResource ButtonTextBlock}">
+                            <Run Text="Отчество" FontWeight="Bold"/>
+                            <Run Text="{Binding MiddleNameReader}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="1"
+                            Style="{DynamicResource ButtonTextBlock}">
+                            <Run Text="Номер телефона" FontWeight="Bold"/>
+                            <Run Text="{Binding NumberPhoneReader}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Column="2"
+                            Style="{DynamicResource ButtonTextBlock}">
+                            <Run Text="Домашний номер" FontWeight="Bold"/>
+                            <Run Text="{Binding HomePhoneReader}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="2"
+                            Style="{DynamicResource ButtonTextBlock}">
+                            <Run Text="Дата рождения" FontWeight="Bold"/>
+                            <Run Text="{Binding DateOfBirthReader,
+                                StringFormat=dd.MM.yyyy}"/>
+                        </TextBlock>
 
-        <DataGrid x:Name="ListReaderDG"
-                  AutoGenerateColumns="False"
-                  IsReadOnly="True"
-                  ScrollViewer.CanContentScroll="True"
-                  Grid.Row="1"
-                  MouseDoubleClick="ListReaderDG_MouseDoubleClick">
-            <DataGrid.ContextMenu>
-                <ContextMenu Name="BookCM">
-                    <MenuItem Header="Редактирование" x:Name="EditM" Click="EditM_Click"/>
-                    <Separator/>
-                    <MenuItem Header="Удалить" x:Name="DeleteM" Click="DeleteM_Click"/>
-                </ContextMenu>
-            </DataGrid.ContextMenu>
+                        <TextBlock Grid.Row="2" Grid.Column="2"
+                            Style="{DynamicResource ButtonTextBlock}">
+                            <Run Text="Уникальный номер" FontWeight="Bold"/>
+                            <Run Text="{Binding UniqueNumberReaderCard}"/>
+                        </TextBlock>
 
-            <DataGrid.Columns>
-                <DataGridTextColumn x:Name="dgTcIdUser"
-                                    Header="№ п/п"
-                                    Width="150"
-                                    Binding="{Binding IdReader}"/>
-
-                <DataGridTextColumn x:Name="dgTcLoginUser"
-                                    Header="Уникальный номер"
-                                    Width="200"
-                                    Binding="{Binding UniqueNumberReader}"/>
-                <DataGridTextColumn x:Name="dgTcLastNameReader"
-                                    Header="Фамилия"
-                                    Width="200"
-                                    Binding="{Binding LastNameReader}"/>
-                <DataGridTextColumn x:Name="dgTcFirstNameRoler"
-                                    Header="Имя"
-                                    Width="200"
-                                    Binding="{Binding FirstNameReader}"/>
-                <DataGridTextColumn x:Name="dgTcMMiddleNameReader"
-                                    Header="Отчество"
-                                    Width="200"
-                                    Binding="{Binding MiddleNameReader}"/>
-                <DataGridTextColumn x:Name="dgTcAdress"
-                                    Header="Адрес"
-                                    Width="200"
-                                    Binding="{Binding IdAdressReader}"/>
-                <DataGridTextColumn x:Name="dgTcPhoneNumber"
-                                    Header="Сотовый телефон"
-                                    Width="200"
-                                    Binding="{Binding NumberPhoneReader}"/>
-                <DataGridTextColumn x:Name="dgTcHomePhone"
-                                    Header="Домашний телефон"
-                                    Width="200"
-                                    Binding="{Binding HomePhoneReader}"/>
-                <DataGridTextColumn x:Name="dgTcDateOfBirth"
-                                    Header="Домашний телефон"
-                                    Width="200"
-                                    Binding="{Binding DateOfBirthReader}"/>
-            </DataGrid.Columns>
-
-        </DataGrid>
+                        <TextBlock Grid.Row="3" Grid.Column="2"
+                                   Style="{DynamicResource ButtonTextBlock}">
+                            <TextBlock.Text>
+                                <MultiBinding 
+                                    StringFormat="{} Регион: {0}, Город: {1}, Улица: {2}, Дом: {3}, Корпус: {4}, Квартира: {5}">
+                                    <Binding Path="Address.Region.NameRegion"/>
+                                    <Binding Path="Address.City.NameCity"/>
+                                    <Binding Path="Address.Street.NameStreet"/>
+                                    <Binding Path="Address.House"/>
+                                    <Binding Path="Address.Housing"/>
+                                    <Binding Path="Address.Flat"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>

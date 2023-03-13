@@ -23,5 +23,20 @@ namespace Uhanov.WindowFolder.StaffFolder
         {
             InitializeComponent();
         }
+
+        private void ListReader_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddReader_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

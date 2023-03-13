@@ -52,8 +52,8 @@ namespace Uhanov.PageFolder.AdminPageFolder
                 {
                     DBEntities.GetContext().User.Add(new User()
                     {
-                        LoginUser=LoginTB.Text,
-                        PasswordUser=PasswordPsb.Password,
+                        Login=LoginTB.Text,
+                        Password=PasswordPsb.Password,
                         IdRole=Int32.Parse(RoleCB.SelectedValue.ToString())
                     });
                     DBEntities.GetContext().SaveChanges();

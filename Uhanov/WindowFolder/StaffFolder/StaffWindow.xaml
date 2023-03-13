@@ -25,19 +25,19 @@
                 <Image
                         Source="/Uhanov;component/ResourceFolder/Logo.png"/>
                 <StackPanel Grid.Row="1">
-                    <Button x:Name="ListUser" 
+                    <Button x:Name="ListReader" 
                                 HorizontalAlignment="Left"
-                                Click="ListUser_Click" Margin="10,10,0,10" Width="270">
+                                Click="ListReader_Click" Margin="10,10,0,10" Width="270">
                         <StackPanel Orientation="Horizontal" Width="109">
-                            <TextBlock Text="Список книг" Style="{DynamicResource ButtonTextBlock}"/>
+                            <TextBlock Text="Список читателей" Style="{DynamicResource ButtonTextBlock}"/>
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="AddUser" 
+                    <Button x:Name="AddReader" 
                                 HorizontalAlignment="Left"
-                                Click="AddUser_Click" Margin="10,10,0,10" Width="270">
+                                Click="AddReader_Click" Margin="10,10,0,10" Width="270">
                         <StackPanel Orientation="Horizontal" Width="148">
-                            <TextBlock Text="Добавить книгу" Style="{DynamicResource ButtonTextBlock}"/>
+                            <TextBlock Text="Добавить читателя" Style="{DynamicResource ButtonTextBlock}"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>

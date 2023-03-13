@@ -39,5 +39,10 @@ namespace Uhanov.PageFolder.StaffPageFolder
         {
 
         }
+
+        private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -43,37 +43,37 @@
         
         <Label Content="Уникальный номер" Grid.Column="1"
                Grid.Row="1" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="LoginTB"
+        <TextBox x:Name="UniqueNumberTb"
                  Grid.Row="1" Grid.Column="2"/>
 
         <Label Content="Фамилия" Grid.Column="1"
                Grid.Row="3" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="LastName"
+        <TextBox x:Name="LastNameTb"
                  Grid.Row="3" Grid.Column="2"/>
 
         <Label Content="Имя" Grid.Column="1"
                Grid.Row="5" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="FirstName"
+        <TextBox x:Name="FirstNameTb"
                  Grid.Row="5" Grid.Column="2"/>
         
         <Label Content="Отчество" Grid.Column="1"
                Grid.Row="7" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="MiddleName"
+        <TextBox x:Name="MiddleNameTb"
                  Grid.Row="7" Grid.Column="2"/>
 
         <Label Content="Дата рождения" Grid.Column="1"
                Grid.Row="9" Style="{DynamicResource NormalLabel}"/>
-        <DatePicker x:Name="DateOfBirth"
+        <DatePicker x:Name="DateOfBirthDP"
                  Grid.Row="9" Grid.Column="2"/>
 
         <Label Content="Сотовый телефон" Grid.Column="1"
                Grid.Row="11" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="NumberPhone"
+        <TextBox x:Name="NumberPhoneTb"
                  Grid.Row="11" Grid.Column="2"/>
 
         <Label Content="Домашний телефон" Grid.Column="1"
                Grid.Row="13" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="HomeNumberPhone"
+        <TextBox x:Name="HomeNumberPhoneTb"
                  Grid.Row="13" Grid.Column="2"/>
         
         <Label Content="Регион" Grid.Column="4"
@@ -108,17 +108,17 @@
 
         <Label Content="Дом" Grid.Column="4"
                Grid.Row="7" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="House"
+        <TextBox x:Name="HouseTb"
                  Grid.Row="7" Grid.Column="5"/>
 
         <Label Content="Корпус" Grid.Column="4"
                Grid.Row="9" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="Building"
+        <TextBox x:Name="HousingTb"
                  Grid.Row="9" Grid.Column="5"/>
 
         <Label Content="Квартира" Grid.Column="4"
                Grid.Row="11" Style="{DynamicResource NormalLabel}"/>
-        <TextBox x:Name="Apartment"
+        <TextBox x:Name="FlatTb"
                  Grid.Row="11" Grid.Column="5"/>
 
 
@@ -149,7 +149,7 @@
         </Button>
 
         <Button x:Name="AddPhotoUserBtn"
-                Click="AddPhotoBtn_Click"
+                Click="AddPhotoUserBtn_Click"
                 Width="230"
                 Grid.Column="7" Grid.Row="13">
             <StackPanel Orientation="Horizontal" Width="133" Height="37">

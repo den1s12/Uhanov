@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 
 namespace Uhanov.DataFolder
 {
-    internal class ContexClass
-    {
         public partial class DBEntities : DbContext
         {
             private static DBEntities context;
@@ -23,4 +21,3 @@ namespace Uhanov.DataFolder
             }
         }
     }
-}

@@ -14,31 +14,34 @@ using System.Windows.Media.Imaging;
 
 namespace Uhanov.ClassFolder
 {
-    public static BitmapImage ConvertByteArrayToImage(byte[] array)
+    class ImageClass
     {
-        if (array == null)
+        public static BitmapImage ConvertByteArrayToImage(byte[] array)
         {
-            using (var ms = new MemoryStream(array, 0, array.Length))
+            if (array != null)
             {
-                var image = new BitmapImage();
-                image.BeginInit();
-                image.CacheOption = BitmapCacheOption.OnLoad;
-                image.StreamSource = ms;
-                image.EndInit();
-                return image;
+                using (var ms = new MemoryStream(array, 0, array.Length))
+                {
+                    var image = new BitmapImage();
+                    image.BeginInit();
+                    image.CacheOption = BitmapCacheOption.OnLoad;
+                    image.StreamSource = ms;
+                    image.EndInit();
+                    return image;
+                }
             }
+            return null;
         }
-        return null;
-    }
-    public static byte[] ConvertImageToByteArray(string fileName)
-    {
-        Bitmap bitmap = new Bitmap(fileName);
-        ImageFormat bmpFormat = bitmap.RawFormat;
-        var imageToConvert = Image.FromFile(fileName);
-        using (var ms = new MemoryStream())
+        public static byte[] ConvertImageToByteArray(string fileName)
         {
-            imageToConvert.Save(ms, bmpFormat);
-            return ms.ToArray();
+            Bitmap bitmap = new Bitmap(fileName);
+            ImageFormat bmpFormat = bitmap.RawFormat;
+            var imageToConvert = Image.FromFile(fileName);
+            using (var ms = new MemoryStream())
+            {
+                imageToConvert.Save(ms, bmpFormat);
+                return ms.ToArray();
+            }
         }
     }
 }

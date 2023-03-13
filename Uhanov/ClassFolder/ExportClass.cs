@@ -21,7 +21,7 @@
 //        openDlg.RestoreDirectory = true;
 //        string path = openDlg.FileName;
 
-//        if (openDlg.ShowDialog()==true)
+//        if (openDlg.ShowDialog() == true)
 //        {
 //            excelApplication = new Excel.Application();
 //            excelApplication.Visible = true;

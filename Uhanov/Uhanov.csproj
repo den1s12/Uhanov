@@ -69,6 +69,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClassFolder\ExportClass.cs" />
+    <Compile Include="ClassFolder\ImageClass.cs" />
     <Compile Include="ClassFolder\MBClass.cs" />
     <Compile Include="ClassFolder\VariableClass.cs" />
     <Compile Include="DataFolder\ContexClass.cs" />
@@ -105,6 +106,12 @@
     <Compile Include="PageFolder\AdminPageFolder\UserListPage.xaml.cs">
       <DependentUpon>UserListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageFolder\StaffPageFolder\AddReaderPage.xaml.cs">
+      <DependentUpon>AddReaderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageFolder\StaffPageFolder\ListReaderPage.xaml.cs">
+      <DependentUpon>ListReaderPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowFolder\AdminFolder\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -126,6 +133,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageFolder\AdminPageFolder\UserListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\StaffPageFolder\AddReaderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\StaffPageFolder\ListReaderPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,7 +203,6 @@
     <Resource Include="ResourceFolder\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="PageFolder\StaffPageFolder\" />
     <Folder Include="ResourceFolder\ImageFolder\" />
   </ItemGroup>
   <ItemGroup>

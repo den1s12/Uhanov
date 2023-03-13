@@ -40,7 +40,7 @@
             <RowDefinition Height="70"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <Label Content="Уникальный номер" Grid.Column="1"
                Grid.Row="1" Style="{DynamicResource NormalLabel}"/>
         <TextBox x:Name="UniqueNumberTb"
@@ -55,7 +55,7 @@
                Grid.Row="5" Style="{DynamicResource NormalLabel}"/>
         <TextBox x:Name="FirstNameTb"
                  Grid.Row="5" Grid.Column="2"/>
-        
+
         <Label Content="Отчество" Grid.Column="1"
                Grid.Row="7" Style="{DynamicResource NormalLabel}"/>
         <TextBox x:Name="MiddleNameTb"
@@ -75,7 +75,7 @@
                Grid.Row="13" Style="{DynamicResource NormalLabel}"/>
         <TextBox x:Name="HomeNumberPhoneTb"
                  Grid.Row="13" Grid.Column="2"/>
-        
+
         <Label Content="Регион" Grid.Column="4"
                Grid.Row="1" Style="{DynamicResource NormalLabel}"/>
         <ComboBox x:Name="RegionCB"
@@ -121,14 +121,9 @@
         <TextBox x:Name="FlatTb"
                  Grid.Row="11" Grid.Column="5"/>
 
-
-        <!--<ComboBox x:Name="RoleCB"
-                 Grid.Row="5" Grid.Column="2"
-                     SelectedItem="{Binding Role}"
-                          DisplayMemberPath="NameRole"
-                          SelectedValuePath="IdRole"
-                  HorizontalContentAlignment="Left"
-                  Width="230" Height="50"/>-->
+        <Image x:Name="PhotoIm"
+               Grid.Column="7" Grid.RowSpan="8"
+               MouseLeftButtonDown="PhotoIm_MouseLeftButtonDown" Grid.Row="2"/>
 
         <Button x:Name="AddUserBtn"
                 Click="AddUserBtn_Click"
@@ -138,7 +133,7 @@
                 <TextBlock Text="Добавить пользователя" Style="{DynamicResource ButtonTextBlock}" Height="28"/>
             </StackPanel>
         </Button>
-        
+
         <Button x:Name="BackBtn"
                 Click="BackBtn_Click"
                 Width="120"
@@ -151,7 +146,7 @@
         <Button x:Name="AddPhotoUserBtn"
                 Click="AddPhotoUserBtn_Click"
                 Width="230"
-                Grid.Column="7" Grid.Row="13">
+                Grid.Column="7" Grid.Row="11">
             <StackPanel Orientation="Horizontal" Width="133" Height="37">
                 <TextBlock Text="Загрузить фото" Style="{DynamicResource ButtonTextBlock}" Height="26"/>
             </StackPanel>

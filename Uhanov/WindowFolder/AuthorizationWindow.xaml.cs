@@ -63,12 +63,12 @@ namespace Uhanov.WindowFolder
                     {
                         switch (user.IdRole)
                         {
-                            case 1:
+                            case 2:
                                 new AdminFolder.AdminWindow().ShowDialog();
                                 break;
 
-                            case 2:
-                                MBClass.InfoMB("Сотрудник");
+                            case 4:
+                                new StaffFolder.StaffWindow().ShowDialog();
                                 break;
                         }
                     }

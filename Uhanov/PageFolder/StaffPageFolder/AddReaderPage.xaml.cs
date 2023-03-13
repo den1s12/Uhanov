@@ -82,7 +82,7 @@ namespace Uhanov.PageFolder.StaffPageFolder
                 {
                     selectedFileName = op.FileName;
                     reader.PhotoReader = ImageClass.ConvertImageToByteArray(selectedFileName);
-                    PhotoIm.Source = ImageClass.ConvertImageToByteArray(reader.PhotoReader);
+                    PhotoIm.Source = ImageClass.ConvertByteArrayToImage(reader.PhotoReader);
                 }    
             }
             catch (Exception ex)
@@ -112,6 +112,11 @@ namespace Uhanov.PageFolder.StaffPageFolder
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PhotoIm_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
         }

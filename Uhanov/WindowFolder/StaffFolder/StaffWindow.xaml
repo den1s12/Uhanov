@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:Uhanov.WindowFolder.StaffFolder"
         mc:Ignorable="d"
         Title="AdminWindow"
-        Height="750" Width="1200"
-        MaxHeight="750" MaxWidth="1200"
-        MinHeight="750" MinWidth="1200"
+        Height="850" Width="1600"
+        MaxHeight="850" MaxWidth="1600"
+        MinHeight="850" MinWidth="1600"
         Background="#d1eeea">
     <Grid>
         <Grid Grid.Row="1">

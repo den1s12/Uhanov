@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Uhanov.ClassFolder;
 
 namespace Uhanov.WindowFolder.StaffFolder
 {
@@ -22,21 +23,22 @@ namespace Uhanov.WindowFolder.StaffFolder
         public StaffWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new PageFolder.StaffPageFolder.ListReaderPage());
         }
 
         private void ListReader_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new PageFolder.StaffPageFolder.ListReaderPage());
         }
 
         private void AddReader_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new PageFolder.StaffPageFolder.AddReaderPage());
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MBClass.ExitMB();
         }
     }
 }

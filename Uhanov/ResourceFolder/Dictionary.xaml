@@ -129,4 +129,23 @@
         <Setter Property="Background" Value="{StaticResource FillBorder}"/>
         <Setter Property="BorderBrush" Value="{StaticResource FillFont}"/>
     </Style>
+
+    <Style TargetType="DatePicker">
+        <Setter Property="FontFamily" Value="Century"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="{StaticResource FillFont}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FillFont}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Width" Value="230"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+
+    <Style TargetType="ListBox">
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="BorderBrush" Value="{StaticResource FillBorder}"/>
+    </Style>
 </ResourceDictionary>

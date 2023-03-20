@@ -43,45 +43,45 @@
                         </Grid.RowDefinitions>
                         <Image Grid.RowSpan="4" Source="{Binding PhotoReader}"/>
                         <TextBlock Grid.Column="1"
-                            Style="{DynamicResource ButtonTextBlock}">
+                            Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Фамилия" FontWeight="Bold"/>
                             <Run Text="{Binding LastNameReader}"/>
                         </TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="1"
-                            Style="{DynamicResource ButtonTextBlock}">
+                            Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Имя" FontWeight="Bold"/>
                             <Run Text="{Binding FirstNameReader}"/>
                         </TextBlock>
                         <TextBlock Grid.Row="2" Grid.Column="1"
-                            Style="{DynamicResource ButtonTextBlock}">
+                            Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Отчество" FontWeight="Bold"/>
                             <Run Text="{Binding MiddleNameReader}"/>
                         </TextBlock>
                         <TextBlock Grid.Row="3" Grid.Column="1"
-                            Style="{DynamicResource ButtonTextBlock}">
+                            Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Номер телефона" FontWeight="Bold"/>
                             <Run Text="{Binding NumberPhoneReader}"/>
                         </TextBlock>
                         <TextBlock Grid.Column="2"
-                            Style="{DynamicResource ButtonTextBlock}">
+                            Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Домашний номер" FontWeight="Bold"/>
                             <Run Text="{Binding HomePhoneReader}"/>
                         </TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="2"
-                            Style="{DynamicResource ButtonTextBlock}">
+                            Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Дата рождения" FontWeight="Bold"/>
                             <Run Text="{Binding DateOfBirthReader,
                                 StringFormat=dd.MM.yyyy}"/>
                         </TextBlock>
 
                         <TextBlock Grid.Row="2" Grid.Column="2"
-                            Style="{DynamicResource ButtonTextBlock}">
+                            Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Уникальный номер" FontWeight="Bold"/>
                             <Run Text="{Binding UniqueNumberReaderCard}"/>
                         </TextBlock>
 
                         <TextBlock Grid.Row="3" Grid.Column="2"
-                                   Style="{DynamicResource ButtonTextBlock}">
+                                   Style="{DynamicResource StyleTextBlock}">
                             <TextBlock.Text>
                                 <MultiBinding 
                                     StringFormat="{} Регион: {0}, Город: {1}, Улица: {2}, Дом: {3}, Корпус: {4}, Квартира: {5}">

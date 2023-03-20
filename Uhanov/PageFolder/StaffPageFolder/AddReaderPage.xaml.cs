@@ -36,7 +36,7 @@ namespace Uhanov.PageFolder.StaffPageFolder
 
         private void AddressAdd()
         {
-            var adressAdd = new Adress()
+            var addressAdd = new Adress()
             {
                 IdRegion = Int32.Parse(RegionCB.SelectedItem.ToString()),
                 IdCity = Int32.Parse(CityCB.SelectedItem.ToString()),
@@ -45,9 +45,9 @@ namespace Uhanov.PageFolder.StaffPageFolder
                 BuildingHouse = HousingTb.Text,
                 AppartmentHouse = Int32.Parse(FlatTb.Text),
             };
-            DBEntities.GetContext().Adress.Add(adressAdd);
+            DBEntities.GetContext().Adress.Add(addressAdd);
             DBEntities.GetContext().SaveChanges();
-            adressAdd.IdAdress = adressAdd.IdAdress;
+            adress.IdAdress = addressAdd.IdAdress;
         }
 
         private void ReaderAdd()

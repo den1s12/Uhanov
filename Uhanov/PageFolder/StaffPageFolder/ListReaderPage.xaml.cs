@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Uhanov.DataFolder;
 
 namespace Uhanov.PageFolder.StaffPageFolder
 {
@@ -23,6 +24,8 @@ namespace Uhanov.PageFolder.StaffPageFolder
         public ListReaderPage()
         {
             InitializeComponent();
+            ListReaderLB.ItemsSource = DBEntities.GetContext().Reader
+                .ToList().OrderBy(u => u.LastNameReader);
         }
 
         private void ListReaderDG_MouseDoubleClick(object sender, MouseButtonEventArgs e)

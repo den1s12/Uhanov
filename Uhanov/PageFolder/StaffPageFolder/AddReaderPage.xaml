@@ -80,9 +80,9 @@
                Grid.Row="1" Style="{DynamicResource NormalLabel}"/>
         <ComboBox x:Name="RegionCB"
                  Grid.Row="1" Grid.Column="5"
-                     SelectedItem="{Binding Role}"
-                          DisplayMemberPath="NameRole"
-                          SelectedValuePath="IdRole"
+                     SelectedItem="{Binding Region}"
+                          DisplayMemberPath="NameRegion"
+                          SelectedValuePath="IdRegion"
                   HorizontalContentAlignment="Left"
                   Width="230" Height="50"/>
 
@@ -90,9 +90,9 @@
                Grid.Row="3" Style="{DynamicResource NormalLabel}"/>
         <ComboBox x:Name="CityCB"
                  Grid.Row="3" Grid.Column="5"
-                     SelectedItem="{Binding Role}"
-                          DisplayMemberPath="NameRole"
-                          SelectedValuePath="IdRole"
+                     SelectedItem="{Binding City}"
+                          DisplayMemberPath="NameCity"
+                          SelectedValuePath="IdCity"
                   HorizontalContentAlignment="Left"
                   Width="230" Height="50"/>
 
@@ -100,9 +100,9 @@
                Grid.Row="5" Style="{DynamicResource NormalLabel}"/>
         <ComboBox x:Name="StreetCB"
                  Grid.Row="5" Grid.Column="5"
-                     SelectedItem="{Binding Role}"
-                          DisplayMemberPath="NameRole"
-                          SelectedValuePath="IdRole"
+                     SelectedItem="{Binding Street}"
+                          DisplayMemberPath="NameStreet"
+                          SelectedValuePath="IdStreet"
                   HorizontalContentAlignment="Left"
                   Width="230" Height="50"/>
 

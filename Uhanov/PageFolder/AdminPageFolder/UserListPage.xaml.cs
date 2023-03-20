@@ -31,14 +31,14 @@ namespace Uhanov.PageFolder.AdminPageFolder
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //ListUserDG.ItemsSource = DBEntities.GetContext()
-            //     .User.Where(u => u.Login
-            //     .StartsWith(SearchTb.Text))
-            //     .ToList().OrderBy(u => u.Login);
-            //if (ListUserDG.Items.Count <= 0)
-            //{
-            //    MBClass.ErrorMB("Данные не найдены");
-            //}
+            ListUserDG.ItemsSource = DBEntities.GetContext()
+               .User.Where(u => u.Login
+               .StartsWith(SearchTb.Text))
+               .ToList().OrderBy(u => u.Login);
+            if (ListUserDG.Items.Count <= 0)
+            {
+                MBClass.ErrorMB("Данные не найдены");
+            }
         }
 
         private void ListUserDG_MouseDoubleClick(object sender, MouseButtonEventArgs e)

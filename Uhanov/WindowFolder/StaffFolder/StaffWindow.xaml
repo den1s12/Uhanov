@@ -28,15 +28,15 @@
                     <Button x:Name="ListReader" 
                                 HorizontalAlignment="Left"
                                 Click="ListReader_Click" Margin="10,10,0,10" Width="270">
-                        <StackPanel Orientation="Horizontal" Width="109">
-                            <TextBlock Text="Список читателей" Style="{DynamicResource ButtonTextBlock}"/>
+                        <StackPanel Orientation="Horizontal" Width="150">
+                            <TextBlock Text="Список читателей" Style="{DynamicResource ButtonTextBlock}" Width="150"/>
                         </StackPanel>
                     </Button>
 
                     <Button x:Name="AddReader" 
                                 HorizontalAlignment="Left"
                                 Click="AddReader_Click" Margin="10,10,0,10" Width="270">
-                        <StackPanel Orientation="Horizontal" Width="148">
+                        <StackPanel Orientation="Horizontal" Width="160">
                             <TextBlock Text="Добавить читателя" Style="{DynamicResource ButtonTextBlock}"/>
                         </StackPanel>
                     </Button>

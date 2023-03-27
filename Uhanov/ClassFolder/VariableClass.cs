@@ -9,5 +9,7 @@ namespace Uhanov.ClassFolder
     internal class VariableClass
     {
         public static int UserId { get; set; }
+
+        public static int ReaderId { get; set; }
     }
 }

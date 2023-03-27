@@ -155,6 +155,9 @@
     <Compile Include="PageFolder\StaffPageFolder\AddReaderPage.xaml.cs">
       <DependentUpon>AddReaderPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageFolder\StaffPageFolder\EditReaderPage.xaml.cs">
+      <DependentUpon>EditReaderPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageFolder\StaffPageFolder\ListReaderPage.xaml.cs">
       <DependentUpon>ListReaderPage.xaml</DependentUpon>
     </Compile>
@@ -183,6 +186,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageFolder\StaffPageFolder\AddReaderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\StaffPageFolder\EditReaderPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

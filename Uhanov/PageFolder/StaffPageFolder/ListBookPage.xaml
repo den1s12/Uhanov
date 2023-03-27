@@ -1,0 +1,79 @@
+﻿<Page x:Class="Uhanov.PageFolder.StaffPageFolder.ListBookPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Uhanov.PageFolder.StaffPageFolder"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Список документов"
+      Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <TextBox x:Name="SearchTb"
+                         TextChanged="SearchTb_TextChanged"/>
+
+        <DataGrid x:Name="ListDocDG"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          ScrollViewer.CanContentScroll="True"
+                          Grid.Row="1"
+                          MouseDoubleClick="ListDocDG_MouseDoubleClick"
+                          FontSize="20">
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="DocCM">
+                    <MenuItem Header="Редактирование" x:Name="EditM" Click="EditM_Click"/>
+                    <Separator/>
+                    <MenuItem Header="Удалить" x:Name="DeleteM" Click="DeleteM_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="dgTcIdDocument"
+                                            Header="№ п/п"
+                                            Width="110"
+                                            Binding="{Binding IdBook}"/>
+
+                <DataGridTextColumn x:Name="dgTcLastName"
+                                            Header="Название книги"
+                                            Width="150"
+                                            Binding="{Binding NameBook}"/>
+
+                <DataGridTextColumn x:Name="dgTcFirstName"
+                                            Header="Город"
+                                            Width="150"
+                                            Binding="{Binding City.NameCity}"/>
+
+                <DataGridTextColumn x:Name="dgTcMiddleName"
+                                            Header="Издатель"
+                                            Width="150"
+                                            Binding="{Binding PublishingHouse.NamePublisherHouse}"/>
+
+                <DataGridTextColumn x:Name="dgTcSerialPassport"
+                                            Header="Дата издания"
+                                            Width="200"
+                                            Binding="{Binding DateOfPublishing}"/>
+
+                <DataGridTextColumn x:Name="dgTcNumberPassport"
+                                            Header="Количество страниц"
+                                            Width="200"
+                                            Binding="{Binding AmountOfPages}"/>
+
+                <DataGridTextColumn x:Name="dgTcDateOfInsurence"
+                                            Header="Цена"
+                                            Width="250"
+                                            Binding="{Binding Price}"/>
+
+                <DataGridTextColumn x:Name="dgTcDriverLicense"
+                                            Header="Количество экземпляров"
+                                            Width="250"
+                                            Binding="{Binding CountInstance}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

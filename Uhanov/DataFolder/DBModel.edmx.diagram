@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="DBModel.Instance" Width="1.5" PointX="10.5" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.PublishingHouse" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.Reader" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBModel.Region" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Region" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.Role" Width="1.5" PointX="9.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.Street" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />

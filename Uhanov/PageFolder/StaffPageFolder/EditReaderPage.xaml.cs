@@ -47,5 +47,16 @@ namespace Uhanov.PageFolder.StaffPageFolder
             MBClass.InfoMB("Пользователь успешно отредактирован");
             NavigationService.Navigate(new ListReaderPage());
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Reader reader = DBEntities.GetContext().Reader.FirstOrDefault
+            //    (u=>u.IdReader == VariableClass.ReaderId);
+
+            //Adress adress = DBEntities.GetContext().Adress.FirstOrDefault
+            //    (u=>u.IdAdress == VariableClass.AdressId);
+
+            //RegionCB.SelectedValue = adress.Region;
+        }
     }
 }

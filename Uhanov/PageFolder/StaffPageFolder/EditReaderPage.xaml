@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="650" d:DesignWidth="1250"
      Title="Добавление читателя"
-      Background="#d1eeea">
+      Background="#d1eeea"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Grid.ColumnDefinitions>

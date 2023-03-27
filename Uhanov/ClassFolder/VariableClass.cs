@@ -11,5 +11,8 @@ namespace Uhanov.ClassFolder
         public static int UserId { get; set; }
 
         public static int ReaderId { get; set; }
+
+        public static int AdressId { get; set; }
+
     }
 }
